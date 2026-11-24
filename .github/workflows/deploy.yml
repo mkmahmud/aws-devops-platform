@@ -46,7 +46,7 @@ jobs:
 
       - name: Build & push backend
         if: ${{ !inputs.image_tag }}
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: backend
           push: true
@@ -57,7 +57,7 @@ jobs:
 
       - name: Build & push frontend
         if: ${{ !inputs.image_tag }}
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: frontend
           push: true
